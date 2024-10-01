@@ -87,14 +87,14 @@ function carrega_linha(){
 function filtro(anime){
     let alvo_ano = anos.value
     let alvo_gen = generos.value
-    if(id < anime.mal_id){
-        anime.genres.forEach(genero =>{
-            if(genero.name == alvo_gen && (alvo_ano == "" || alvo_ano == anime.year)){
+    anime.genres.forEach(genero =>{
+        if(id < anime.mal_id){
+            if((genero.name == alvo_gen || alvo_gen == '') && (alvo_ano == '' || alvo_ano == anime.year)){
                 cria_cards(anime, animes)
                 id = anime.mal_id
             }
-        })
-    }
+        }
+    })
 }
 
 //criando favoritos a partir do localstorage
@@ -138,8 +138,12 @@ function cria_cards(anime, destino){
         conteudo += "<p>Data de estreia:<br> " + anime.year + '</p>'
     }
     
-    //fazendo o info e sumindo com ele
-    infos.innerHTML = '<b>' + conteudo + '</b>' + "Salvar: "
+    //fazendo o info e sumindo com 
+    if(destino == favoritos){
+        infos.innerHTML = '<b id="salvar">' + conteudo + '</b>' + "Remover: "
+    }else{
+        infos.innerHTML = '<b id="salvar">' + conteudo + '</b>' + "Salvar: "
+    }
     infos.style.display = "none"
 
     //estilização dos cartões

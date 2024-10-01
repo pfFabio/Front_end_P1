@@ -5,9 +5,13 @@
         padding: 10px;
     }
 
+    #teste{
+        display: none;
+    }
 
     #filtros > select, #filtros > button {
         width: 100%; 
         max-width: 90%; 
+        margin-top: 1rem;
     }
 }
