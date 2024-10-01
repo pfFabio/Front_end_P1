@@ -1,0 +1,146 @@
+html{
+    background-color: rgb(64, 67, 78);
+    font-size: 10px;
+}
+
+
+header{
+    background-color: rgb(34, 92, 131);
+    display: flex;
+}
+
+header>img{
+    height: 15rem;
+}
+
+header >div> div>div{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+#frase_foda{
+    display: grid;
+    font-family: 'Harland', sans-serif;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: rgb(169, 218, 250);
+    text-shadow: 4px 4px 2rem rgb(255, 208, 0), 2px 2px 0 rgb(73, 3, 3), -2px -2px 0 rgb(73, 3, 3), 2px -2px 0 rgb(73, 3, 3), -2px 2px 0 rgb(73, 3, 3);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+#filtros{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+#filtros>button{
+    width: 15rem;
+    padding: 10px;
+    background-color: rgb(34, 92, 131);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#filtros > button:hover {
+    background-color: rgb(255, 217, 0);
+    transform: scale(1.05);
+}
+
+#filtros > select {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgb(64, 67, 78); 
+    color: white;
+    border: 2px solid rgb(34, 92, 131); 
+    width: 14rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+#filtros > select:hover {
+    border-color: rgb(255, 217, 0); 
+    transform: scale(1.05);
+}
+
+#teste{
+    text-align: end;
+    width: 100%;
+    color: rgb(255, 217, 0)
+    
+}
+
+#favoritos{
+    background-color: rgb(64, 67, 78);
+    display : flex;
+    overflow-x: scroll;
+    width: 100%;
+
+}
+
+#favoritos::-webkit-scrollbar {
+    width: 5px;
+  }
+
+#favoritos::-webkit-scrollbar-thumb {
+    background-color: rgb(128, 131, 142);
+    border-radius: 5px;
+  }
+
+#favoritos>div{
+    width: 10rem;
+}
+
+#favoritos>div>div{
+    width: 10rem;
+}
+
+#animes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: small;
+}
+
+
+.card{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-color: bisque;
+    color: black;
+    margin: 2rem;
+    height: 21rem;
+    width: 20rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out,  height 0.5s ease-in-out;
+}
+
+.card.surgir{
+    opacity: 1;
+}
+
+.card.sumir{
+    opacity: 0;
+}
+
+.card>div>div>img{
+    width: 100%;
+    height: 21rem;
+    cursor: pointer;
+}
+
+#carregando{
+    font-size: larger;
+    color: aliceblue;
+    text-align: center;
+}

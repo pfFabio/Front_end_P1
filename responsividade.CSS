@@ -1,0 +1,13 @@
+@media(max-width:700px){
+    header {
+        display: block; 
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    #filtros > select, #filtros > button {
+        width: 100%; 
+        max-width: 90%; 
+    }
+}
