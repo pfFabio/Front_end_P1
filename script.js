@@ -100,15 +100,17 @@ function filtro(anime){
 //criando favoritos a partir do localstorage
 function cria_favoritos(){
     favoritos.innerHTML = ''
-    let lista_fav = localStorage.getItem("animes").split(',')
-    lista_fav.forEach(id_fav =>{
-        let url_fav = `https://api.jikan.moe/v4/anime/` + id_fav
-        fetch(url_fav)
-        .then(response => response.json())
-        .then(data =>{
-            cria_cards(data.data, favoritos)
+    if(localStorage.gatItem("animes") != null && localStorage.gatItem("animes") != ''){
+        let lista_fav = localStorage.getItem("animes").split(',')
+        lista_fav.forEach(id_fav =>{
+            let url_fav = `https://api.jikan.moe/v4/anime/` + id_fav
+            fetch(url_fav)
+            .then(response => response.json())
+            .then(data =>{
+                cria_cards(data.data, favoritos)
+            })
         })
-    })
+    }
 
 }
 
